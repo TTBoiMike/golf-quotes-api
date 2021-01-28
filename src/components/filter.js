@@ -5,46 +5,45 @@ class Filters extends React.Component {
         super()
         this.state = {
             random: true,
-            tag: "undefined"
+            tag: undefined
         }
     }
 
-    setFilter = (value) => {
-        if(value === "filter") {
+    setFilter = (filterValue) => {
+        if(filterValue === "filter") {
             this.setState({
                 random: false
             })
         } else {
             this.setState({
-                random: true
+                random: true,
+                tag: undefined
             })
         }
     }
 
-    newQuoteSubmit = () => {
-        // value of filter to make request to /quotes/random
-        // if filter isn't random - name of tag to make request to /quotes/random/tag
-
+    handleSubmit(e) {
+        e.preventDefault()
+        this.props.generateQuote(this.state.tag)
     }
 
     render() {
         return (
             <form>
                 <div>
-                    <select className="form-control" name="tag" id="tag" style={ this.state.random ? {display:"none"} : {display:"block"}}>
-                        <option value="">All</option>
+                    <select className="form-control" name="tag" id="tag" style={ this.state.random ? {display:"none"} : {display:"block"}} onChange={(e) => this.setState({tag: e.target.value})}>
                         <option value="coach">Coach</option>
-                        <option value="Famous">Famous</option>
-                        <option value="Funny">Funny</option>
-                        <option value="Icon">Icon</option>
-                        <option value="Inspirational">Inspirational</option>
+                        <option value="famous">Famous</option>
+                        <option value="funny">Funny</option>
+                        <option value="icon">Icon</option>
+                        <option value="inspirational">Inspirational</option>
                     </select>
                     <select className="form-control" name="filter" id="filter" onChange={(e) => this.setFilter(e.target.value)}>
                         <option value="random">Random</option>
                         <option value="filter">Filter</option>
                     </select>
                 </div>
-                <button type="submit" className="btn btn-primary">New Quote!</button>
+                <button type="submit" className="btn btn-primary" onClick={(e) => this.handleSubmit(e)}>New Quote!</button>
             </form>
         )
     }

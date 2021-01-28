@@ -5,42 +5,48 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Quotes from './quotes'
 import Filters from './filter'
+import {ApiClient} from '../apiClient'
 
 class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      quotes: [],
-      filters: {
-        "random": true,
-        "filter": false,
-        "tag": undefined
-      }
+      quotes: []
     }
+    this.ApiClient = new ApiClient()
   }
 
   componentDidMount = () => {
-    fetch(`https://golf-quotes-api.herokuapp.com/quotes/random`)
-      .then(data => data.json())
-      .then(json => {
-        let quotes = this.state.quotes;
-        quotes.push(json)
+    return this.generateQuote(undefined)
+  }
+
+  generateQuote(tag) {
+    if(tag === undefined) {
+      this.ApiClient.getQuote(`https://golf-quotes-api.herokuapp.com/quotes/random`)
+      .then(data => data.json().then(json => {
+        let quote = this.state.quotes // []
+        quote[0] = json
         this.setState({
-          quotes: quotes
+          quotes: quote
         })
-      })
+      }))
+    } else {
+      this.ApiClient.getQuote(`https://golf-quotes-api.herokuapp.com/quotes/random/tag/${tag}`)
+        .then(data => console.log(data.json()))
+    }
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
         <Navbar className="bg-primary">
+          <Container>
           <Navbar.Brand className="text-light">Golf is Game of Quotes</Navbar.Brand>
+          </Container>
         </Navbar>
         <Container>
           <Quotes quotes={this.state.quotes}/>
-          <Filters />
+          <Filters generateQuote={(tag) => this.generateQuote(tag)}/>
         </Container>
       </div>
     )
