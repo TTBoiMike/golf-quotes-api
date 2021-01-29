@@ -1,22 +1,24 @@
 import React from 'react'
+import {Carousel} from 'react-bootstrap'
 import '../App.css'
 
 class Quotes extends React.Component {
 
     buildQuoteContainer = () => {
+        console.log(this.props.quotes)
         return this.props.quotes.map((quote) => {
-            return <article>
-                <h3>"{quote.quote}"</h3>
-                <p>{quote.name}</p>
-            </article>
+            return <Carousel.Item interval={5000}>
+                    <h4>"{quote.quote}"</h4>
+                    <p>{quote.name}</p>
+                   </Carousel.Item>
         })
     }
 
     render() {
         return(
-            <div className="quotes-container text-center rounded p-5 mt-5">
+            <Carousel className="quotes-container text-center rounded p-5 mt-5">
                 {this.buildQuoteContainer()}
-            </div>
+            </Carousel>
         )
     }
 }

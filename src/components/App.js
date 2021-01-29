@@ -20,7 +20,7 @@ class App extends React.Component {
     return this.generateQuote(undefined)
   }
 
-  generateQuote(tag) {
+  generateQuote(tag, limit) {
     if(tag === undefined) {
       this.ApiClient.getQuote(`https://golf-quotes-api.herokuapp.com/quotes/random`)
       .then(data => data.json().then(json => {
@@ -31,15 +31,21 @@ class App extends React.Component {
         })
       }))
     } else {
-      this.ApiClient.getQuote(`https://golf-quotes-api.herokuapp.com/quotes/random/tag/${tag}`)
-        .then(data => console.log(data.json()))
+      this.ApiClient.getQuote(`https://golf-quotes-api.herokuapp.com/quotes/random/tag/${tag}?limit=${limit}`)
+        .then(data => data.json().then(json => {
+          console.log(json)
+          let newQuotes = [...json]
+          this.setState({
+            quotes: newQuotes
+          })
+        }))
     }
   }
 
   render() {
     return (
       <div className="App">
-        <Navbar className="bg-primary">
+        <Navbar className="bg-masters">
           <Container>
           <Navbar.Brand className="text-light">Golf is Game of Quotes</Navbar.Brand>
           </Container>

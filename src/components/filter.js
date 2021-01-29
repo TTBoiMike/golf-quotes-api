@@ -32,6 +32,7 @@ class Filters extends React.Component {
             <form>
                 <div>
                     <select className="form-control" name="tag" id="tag" style={ this.state.random ? {display:"none"} : {display:"block"}} onChange={(e) => this.setState({tag: e.target.value})}>
+                        <option value="Random">Random</option>
                         <option value="coach">Coach</option>
                         <option value="famous">Famous</option>
                         <option value="funny">Funny</option>
@@ -43,7 +44,7 @@ class Filters extends React.Component {
                         <option value="filter">Filter</option>
                     </select>
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={(e) => this.handleSubmit(e)}>New Quote!</button>
+                <button type="submit" className="btn bg-masters text-light" onClick={(e) => this.handleSubmit(e)}>New Quote!</button>
             </form>
         )
     }
