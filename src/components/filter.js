@@ -29,22 +29,21 @@ class Filters extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <form onChange={(e) => this.setFilters(e)}>
                 <div className="d-flex mb-5">
                     <select className="form-control" name="tag" id="tag">
-                        <option value="random">Random</option>
-                        <option value="coach">Coach</option>
-                        <option value="famous">Famous</option>
-                        <option value="funny">Funny</option>
-                        <option value="icon">Icon</option>
-                        <option value="inspirational">Inspirational</option>
+                        <option value="random">Random quotes</option>
+                        <option value="coach">Coaching quotes</option>
+                        <option value="famous">Famous quotes</option>
+                        <option value="funny">Funny quotes</option>
+                        <option value="icon">Iconic quotes</option>
+                        <option value="inspirational">Inspirational quotes</option>
                     </select>
                     <select style={this.state.tag === "random" ? {display: "none"} : {display: "block"}} className="form-control" name="limit" id="limit">
-                        <option value="1">1</option>
-                        <option value="5">5</option>
-                        <option value="10">10</option>
+                        <option value="1">1 quote</option>
+                        <option value="5">5 quotes</option>
+                        <option value="10">10 quotes</option>
                     </select>
                 </div>
                 <button type="submit" className="btn btn-block bg-masters text-light p-3" onClick={(e) => this.handleSubmit(e)}>New Quote!</button>

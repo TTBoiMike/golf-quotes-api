@@ -8,8 +8,12 @@ export class ApiClient {
         }
     }
 
-    getQuote(url) {
-        return this.getRequest(url)
+    getQuote(tag, limit) {
+        if(tag === "random") {
+           return this.getRequest(`https://golf-quotes-api.herokuapp.com/quotes/random`)
+        } else {
+            return this.getRequest(`https://golf-quotes-api.herokuapp.com/quotes/random/tag/${tag}?limit=${limit}`)
+        }
     }
 
     getRequest(url) {

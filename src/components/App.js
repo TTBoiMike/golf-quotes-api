@@ -21,23 +21,14 @@ class App extends React.Component {
   }
 
   generateQuote(tag, limit) {
-    if(tag === "random") {
-      this.ApiClient.getQuote(`https://golf-quotes-api.herokuapp.com/quotes/random`)
+    console.log(tag, limit)
+    this.ApiClient.getQuote(tag, limit)
       .then(data => data.json().then(json => {
-        let newQuotes = [json]
+        let newQuotes = [...json]
         this.setState({
           quotes: newQuotes
         })
       }))
-    } else {
-      this.ApiClient.getQuote(`https://golf-quotes-api.herokuapp.com/quotes/random/tag/${tag}?limit=${limit}`)
-        .then(data => data.json().then(json => {
-          let newQuotes = [...json]
-          this.setState({
-            quotes: newQuotes
-          })
-        }))
-    }
   }
 
   render() {
