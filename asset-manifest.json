@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/golf-quotes-api/static/css/main.380c7d07.chunk.css",
+    "main.js": "/golf-quotes-api/static/js/main.544dd88a.chunk.js",
+    "main.js.map": "/golf-quotes-api/static/js/main.544dd88a.chunk.js.map",
+    "runtime-main.js": "/golf-quotes-api/static/js/runtime-main.9aaccbcb.js",
+    "runtime-main.js.map": "/golf-quotes-api/static/js/runtime-main.9aaccbcb.js.map",
+    "static/css/2.150d169a.chunk.css": "/golf-quotes-api/static/css/2.150d169a.chunk.css",
+    "static/js/2.3572ad92.chunk.js": "/golf-quotes-api/static/js/2.3572ad92.chunk.js",
+    "static/js/2.3572ad92.chunk.js.map": "/golf-quotes-api/static/js/2.3572ad92.chunk.js.map",
+    "static/js/3.8cf898da.chunk.js": "/golf-quotes-api/static/js/3.8cf898da.chunk.js",
+    "static/js/3.8cf898da.chunk.js.map": "/golf-quotes-api/static/js/3.8cf898da.chunk.js.map",
+    "index.html": "/golf-quotes-api/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/golf-quotes-api/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.380c7d07.chunk.css.map": "/golf-quotes-api/static/css/main.380c7d07.chunk.css.map",
+    "static/js/2.3572ad92.chunk.js.LICENSE.txt": "/golf-quotes-api/static/js/2.3572ad92.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9aaccbcb.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.3572ad92.chunk.js",
+    "static/css/main.380c7d07.chunk.css",
+    "static/js/main.544dd88a.chunk.js"
+  ]
+}
