@@ -17,23 +17,21 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-    return this.generateQuote(undefined)
+    return this.generateQuote("random")
   }
 
   generateQuote(tag, limit) {
-    if(tag === undefined) {
+    if(tag === "random") {
       this.ApiClient.getQuote(`https://golf-quotes-api.herokuapp.com/quotes/random`)
       .then(data => data.json().then(json => {
-        let quote = this.state.quotes // []
-        quote[0] = json
+        let newQuotes = [json]
         this.setState({
-          quotes: quote
+          quotes: newQuotes
         })
       }))
     } else {
       this.ApiClient.getQuote(`https://golf-quotes-api.herokuapp.com/quotes/random/tag/${tag}?limit=${limit}`)
         .then(data => data.json().then(json => {
-          console.log(json)
           let newQuotes = [...json]
           this.setState({
             quotes: newQuotes
@@ -46,13 +44,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar className="bg-masters">
-          <Container>
           <Navbar.Brand className="text-light">Golf is Game of Quotes</Navbar.Brand>
-          </Container>
         </Navbar>
         <Container>
           <Quotes quotes={this.state.quotes}/>
-          <Filters generateQuote={(tag) => this.generateQuote(tag)}/>
+          <Filters generateQuote={(tag, limit) => this.generateQuote(tag, limit)}/>
         </Container>
       </div>
     )

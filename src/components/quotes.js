@@ -5,18 +5,17 @@ import '../App.css'
 class Quotes extends React.Component {
 
     buildQuoteContainer = () => {
-        console.log(this.props.quotes)
         return this.props.quotes.map((quote) => {
-            return <Carousel.Item interval={5000}>
-                    <h4>"{quote.quote}"</h4>
-                    <p>{quote.name}</p>
+            return <Carousel.Item className="quote-carousel text-light" interval={5000}>
+                    <p className="mb-3 quote-text">"{quote.quote}"</p>
+                    <p className="spec-font">{quote.name}</p>
                    </Carousel.Item>
         })
     }
 
     render() {
         return(
-            <Carousel className="quotes-container text-center rounded p-5 mt-5">
+            <Carousel className="bg-masters quotes-container text-center rounded p-5 my-5">
                 {this.buildQuoteContainer()}
             </Carousel>
         )

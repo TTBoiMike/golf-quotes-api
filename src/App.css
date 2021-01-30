@@ -1,8 +1,17 @@
-.quotes-container {
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  color: #fff;
-  background-color: black;
-}
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 .bg-masters {
   background-color: #006B54;
+}
+.quote-text {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.spec-font {
+  font-family: 'Architects Daughter', cursive;
+}
+@media (min-width: 768px) {
+  .quote-carousel {
+    padding: 0px 75px;
+  }
 }
