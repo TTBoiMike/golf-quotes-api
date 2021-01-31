@@ -1,4 +1,10 @@
 import React from 'react'
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
 import {Navbar} from 'react-bootstrap'
 import {Container} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -6,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Quotes from './quotes'
 import Filters from './filter'
 import {ApiClient} from '../apiClient'
+import About from './about'
 
 class App extends React.Component {
   constructor() {
@@ -20,11 +27,10 @@ class App extends React.Component {
     return this.generateQuote("random")
   }
 
-  generateQuote(tag, limit) {
-    console.log(tag, limit)
-    this.ApiClient.getQuote(tag, limit)
+  generateQuote(tag) {
+    this.ApiClient.getQuote(tag)
       .then(data => data.json().then(json => {
-        let newQuotes = [...json]
+        let newQuotes = [json]
         this.setState({
           quotes: newQuotes
         })
@@ -34,13 +40,25 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navbar className="bg-masters">
-          <Navbar.Brand className="text-light">Golf is Game of Quotes</Navbar.Brand>
-        </Navbar>
-        <Container>
-          <Quotes quotes={this.state.quotes}/>
-          <Filters generateQuote={(tag, limit) => this.generateQuote(tag, limit)}/>
-        </Container>
+        <Router>
+          <Navbar className="bg-masters d-flex justify-content-between">
+            <Container>
+              <Navbar.Brand className="text-light">Golf is Game of Quotes</Navbar.Brand>
+              <Link to="/about"><button className="btn text-light">About</button></Link>
+            </Container>
+          </Navbar>
+          <Container>
+            <Switch>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/">
+                <Quotes quotes={this.state.quotes}/>
+                <Filters generateQuote={(tag, limit) => this.generateQuote(tag, limit)}/>
+              </Route>
+            </Switch>
+          </Container>
+        </Router>
       </div>
     )
   }
