@@ -16,7 +16,7 @@ class About extends React.Component {
                         If you play, follow or simply enjoy watching golf you may be familiar with a few of these phrases. If you haven't you'll definitely recognise who said them.
                     </p>
                     <p>
-                        This a custom API built using express and a simple UI built using React and Bootstrap to showcase random quotes about Golf: what Arnold Palmer descirbed as 'the greatest game mankind as ever invented.' 
+                        This a custom REST API built using express and a simple UI built using React and Bootstrap to showcase random quotes about Golf: what Arnold Palmer descirbed as 'the greatest game mankind as ever invented.' 
                     </p>
                     <Link to="/">
                         <button className="btn bg-masters text-light">View</button>

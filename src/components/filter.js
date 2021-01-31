@@ -22,8 +22,8 @@ class Filters extends React.Component {
                         <option value="coach">Coaching quotes</option>
                         <option value="famous">Famous quotes</option>
                         <option value="funny">Funny quotes</option>
-                        <option value="icon">Iconic quotes</option>
                         <option value="inspirational">Inspirational quotes</option>
+                        <option value="player">Player quotes</option>
                     </select>
                 </div>
                 <button type="submit" className="btn btn-block bg-masters text-light p-3" onClick={(e) => this.handleSubmit(e)}>Random Quote</button>
