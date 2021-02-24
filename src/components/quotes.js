@@ -1,4 +1,5 @@
 import React from 'react'
+import Loader from '../assets/loading.gif'
 import '../App.css'
 
 class Quotes extends React.Component {
@@ -15,6 +16,7 @@ class Quotes extends React.Component {
     render() {
         return(
             <div className="bg-masters quotes-container text-center rounded p-5 my-5">
+                <img src={Loader} height="50px" style={{display: this.props.quotes.length === 0 ? "block" : "none"}} alt="loading spinner"/>
                 {this.buildQuoteContainer()}
             </div>
         )

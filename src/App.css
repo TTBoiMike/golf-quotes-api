@@ -3,6 +3,10 @@
 .bg-masters {
   background-color: #006B54;
 }
+.quotes-container {
+  display: flex;
+  justify-content: center;
+}
 .quote-text {
   font-size: 1.2rem;
   line-height: 1.4;
