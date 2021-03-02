@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/golf-quotes-api/static/css/main.18791161.chunk.css",
-    "main.js": "/golf-quotes-api/static/js/main.4e6c072a.chunk.js",
-    "main.js.map": "/golf-quotes-api/static/js/main.4e6c072a.chunk.js.map",
+    "main.css": "/golf-quotes-api/static/css/main.1625d5f3.chunk.css",
+    "main.js": "/golf-quotes-api/static/js/main.f5d51b26.chunk.js",
+    "main.js.map": "/golf-quotes-api/static/js/main.f5d51b26.chunk.js.map",
     "runtime-main.js": "/golf-quotes-api/static/js/runtime-main.547b68af.js",
     "runtime-main.js.map": "/golf-quotes-api/static/js/runtime-main.547b68af.js.map",
     "static/css/2.150d169a.chunk.css": "/golf-quotes-api/static/css/2.150d169a.chunk.css",
@@ -12,15 +12,16 @@
     "static/js/3.cf1443de.chunk.js.map": "/golf-quotes-api/static/js/3.cf1443de.chunk.js.map",
     "index.html": "/golf-quotes-api/index.html",
     "static/css/2.150d169a.chunk.css.map": "/golf-quotes-api/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.18791161.chunk.css.map": "/golf-quotes-api/static/css/main.18791161.chunk.css.map",
+    "static/css/main.1625d5f3.chunk.css.map": "/golf-quotes-api/static/css/main.1625d5f3.chunk.css.map",
     "static/js/2.80bbb337.chunk.js.LICENSE.txt": "/golf-quotes-api/static/js/2.80bbb337.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/golf-quotes-api/static/media/augusta-bg.4f4d13ed.jpg",
     "static/media/loading.696cd6cc.gif": "/golf-quotes-api/static/media/loading.696cd6cc.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.547b68af.js",
     "static/css/2.150d169a.chunk.css",
     "static/js/2.80bbb337.chunk.js",
-    "static/css/main.18791161.chunk.css",
-    "static/js/main.4e6c072a.chunk.js"
+    "static/css/main.1625d5f3.chunk.css",
+    "static/js/main.f5d51b26.chunk.js"
   ]
 }
