@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-
+body {
+  background-image: url(./assets/augusta-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.width {
+  margin: 0 auto;
+  max-width: 500px;
+}
 .bg-masters {
   background-color: #006B54;
 }

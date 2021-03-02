@@ -16,7 +16,7 @@ class Filters extends React.Component {
     render() {
         return (
             <form onChange={(e) => this.setState({tag: e.currentTarget.tag.value})}>
-                <div className="d-flex mb-5">
+                <div className="mb-5 width">
                     <select className="form-control" name="tag" id="tag">
                         <option value="random">Random quotes</option>
                         <option value="coach">Coaching quotes</option>
@@ -26,7 +26,7 @@ class Filters extends React.Component {
                         <option value="player">Player quotes</option>
                     </select>
                 </div>
-                <button type="submit" className="btn btn-block bg-masters text-light p-3" onClick={(e) => this.handleSubmit(e)}>Random Quote</button>
+                <button type="submit" className="btn btn-block width bg-masters text-light p-3" onClick={(e) => this.handleSubmit(e)}>Random Quote</button>
             </form>
         )
     }
