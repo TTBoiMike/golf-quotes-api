@@ -24,7 +24,7 @@ class About extends React.Component {
                 </Jumbotron>
                 <Container>
                     <h5 className="mb-3">Paths for - https://golf-quotes-api.herokuapp.com</h5>
-                    <Table striped>
+                    <Table striped variant="dark">
                         <thead>
                             <tr>
                                 <h6>All Quotes</h6>
@@ -36,7 +36,7 @@ class About extends React.Component {
                             </tr>
                         </tbody>
                     </Table>
-                                        <Table striped>
+                    <Table striped variant="dark">
                         <thead>
                             <tr>
                                 <h6>All Quotes by Tag and/or Name</h6>
@@ -54,7 +54,7 @@ class About extends React.Component {
                             </tr>
                         </tbody>
                     </Table>
-                    <Table striped>
+                    <Table striped variant="dark">
                         <thead>
                             <tr>
                                 <h6>Random Quotes</h6>
@@ -66,7 +66,7 @@ class About extends React.Component {
                             </tr>
                         </tbody>
                     </Table>
-                    <Table striped>
+                    <Table striped variant="dark">
                         <thead>
                             <tr>
                                 <h6>Random Quotes by Tag</h6>
@@ -78,7 +78,7 @@ class About extends React.Component {
                             </tr>
                         </tbody>
                     </Table>
-                    <Table striped>
+                    <Table striped variant="dark">
                         <thead>
                             <tr>
                                 <h6>Random Quotes by Name</h6>
@@ -90,7 +90,7 @@ class About extends React.Component {
                             </tr>
                         </tbody>
                     </Table>
-                    <Table striped>
+                    <Table striped variant="dark">
                         <thead>
                             <tr>
                                 <h6>Random Quotes by Name and Tag</h6>
